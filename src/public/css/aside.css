@@ -1,0 +1,167 @@
+html,
+body {
+  background: #313131;
+  overflow: hidden;
+}
+
+div#App {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+:root {
+  --primary-color: #fd951f;
+}
+
+#App aside {
+  width: 290px;
+}
+
+aside div#header-group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #FFF;
+  padding: 10px 5px;
+  font-family: 'Roboto';
+}
+
+div#header-group a {
+  color: #fd951f;
+}
+
+aside div#get-group {
+  position: relative;
+  padding: 0px 5px;
+}
+
+/* "ASIDE-INPUT-SEARCH" */
+
+input {
+  width: 100%;
+
+  border: 2px solid var(--primary-color);
+  /* border-right: none; */
+  border-radius: 6px 2px 4px 6px;
+
+  padding: 6px 8px;
+  font-size: 14px;
+  font-family: 'Roboto';
+
+  outline: none;
+
+  color: #212121;
+}
+
+input:focus {
+  color: black;
+}
+
+button#get {
+  position: absolute;
+  right: 5px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+
+  margin-top: 2px;
+  border-radius: 3px;
+  width: 25px;
+  height: 30px;
+}
+
+button#get:hover {
+  background-color: #fd951f;
+  color: #FFF;
+}
+
+/* "MAIN-CONTENT-DND" */
+
+#App main {
+  display: flex;
+  justify-content: flex-start;
+
+  border: 1px solid white;
+
+  width: 100%;
+  height: 100vh;
+}
+
+main div#content-group {
+  display: none;
+}
+
+main div#content-group.window-actived {
+  display: block;
+
+  position: relative;
+  background-color: #212134;
+  width: 100%;
+  height: 100%;
+}
+
+div#content-group header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 5px;
+  max-width: 160px;
+
+  background-color: rgba(89, 249, 255, .5);
+  border-left: 1px solid #fd951f;
+  border-right: .1px solid #fd951f;
+  color: #FFF;
+}
+
+div#content-group label {
+  font-family: 'Roboto mono', Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  overflow-x: hidden;
+}
+
+div#hist-group {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
+
+div#hist-group button {
+  width: 30px;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+div#hist-group button:hover {
+  background-color: #fd951f;
+  color: #FFF;
+}
+
+div#content-group div#webview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fd951f;
+}
+
+webview#content {
+  height: 100%;
+  width: 100%;
+}
+
+#btn-close {
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+}
+
+#btn-close:hover {
+  background-color: #fd951f;
+  color: #FFF;
+}
